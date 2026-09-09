@@ -1,0 +1,16 @@
+# Phase 1 dependencies plus the SDKs added by the phases that need them.
+# Packages for still-later phases (httpx, beautifulsoup4, trafilatura,
+# pandas, plotly, etc.) are intentionally NOT included yet -- they are
+# added when the phase that actually needs them is implemented.
+
+pydantic==2.13.5
+streamlit==1.63.0
+python-dotenv==1.2.3
+
+# Phase 3B: current official Google Gen AI SDK (`from google import genai`),
+# used by collectors/gemini.py for one-shot free-tier Gemini requests.
+google-genai==2.17.0
+
+# Phase 10: LangGraph, used only to orchestrate the existing pipeline
+# functions (agents/graph.py). No LangChain components are used directly.
+langgraph==1.2.0
